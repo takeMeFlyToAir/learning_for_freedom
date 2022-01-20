@@ -5,17 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.zzr</groupId>
-  <artifactId>learning_for_freedom</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>algorithm</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>design-patterns</module>
-    <module>sprintboot</module>
-      <module>concurrency</module>
-      <module>algorithm</module>
-  </modules>
 
-  <name>learning_for_freedom</name>
+  <name>algorithm</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -33,4 +26,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+  </build>
 </project>
