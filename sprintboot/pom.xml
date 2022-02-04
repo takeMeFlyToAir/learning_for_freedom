@@ -26,6 +26,7 @@
         <module>springboot_basic</module>
         <module>springboot_redis</module>
         <module>springboot_message_converter</module>
+        <module>springboot_jpa</module>
     </modules>
 
     <dependencies>
