@@ -1,5 +1,7 @@
 package com.zzr.springboot_basic;
 
+import com.zzr.springboot_basic.init.ApplicationContextInitializerDemo;
+import com.zzr.springboot_basic.init.ProjectInit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringbootBasicApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBasicApplication.class, args);
+		SpringApplication application = new SpringApplication(SpringbootBasicApplication.class);
+		application.addInitializers(new ApplicationContextInitializerDemo());
+		application.run(args);
 	}
 
 }

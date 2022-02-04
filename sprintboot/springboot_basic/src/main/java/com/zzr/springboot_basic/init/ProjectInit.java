@@ -4,6 +4,8 @@ import com.zzr.springboot_basic.config.ProjectConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContextInitializer;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -14,7 +16,7 @@ import java.util.Map;
  */
 @Slf4j
 @Component
-public class ProjectInit implements InitializingBean {
+public class ProjectInit implements InitializingBean{
 
     @Autowired
     private ProjectConfig projectConfig;
@@ -26,4 +28,6 @@ public class ProjectInit implements InitializingBean {
         System.out.println(projectConfig.getBasic().get("count").getClass());
         System.out.println(projectConfig.getBasic().get("time").getClass());
     }
+
+
 }
