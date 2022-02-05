@@ -1,13 +1,12 @@
 package com.zzr.springboot_basic.init;
 
+import com.zzr.springboot_basic.config.FkJava;
 import com.zzr.springboot_basic.config.ProjectConfig;
 import com.zzr.springboot_basic.util.ApplicationUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.ApplicationContextInitializer;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -23,6 +22,9 @@ public class ProjectInit implements InitializingBean, CommandLineRunner {
     @Autowired
     private ProjectConfig projectConfig;
 
+    @Autowired
+    private FkJava fkJava;
+
     @Override
     public void afterPropertiesSet() {
         Map<String, Object> basic = projectConfig.getBasic();
@@ -37,5 +39,6 @@ public class ProjectInit implements InitializingBean, CommandLineRunner {
     public void run(String... args) throws Exception {
         ProjectConfig bean = ApplicationUtil.getBean(ProjectConfig.class);
         System.out.println(bean.getClass().getSimpleName());
+        System.out.println(fkJava.toString());
     }
 }
