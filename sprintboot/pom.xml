@@ -28,6 +28,7 @@
         <module>springboot_message_converter</module>
         <module>springboot_jpa</module>
         <module>springboot_jdbc</module>
+        <module>springboot_mybatis</module>
     </modules>
 
     <dependencies>
