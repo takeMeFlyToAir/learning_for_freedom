@@ -5,7 +5,27 @@
 
 <configuration>
 
+    <settings>
+        <setting name="useGeneratedKeys" value="true"/>
+    </settings>
+
     <objectFactory type="com.springboot.springboot_mybatis.mybatis.CustomObjectFactory">
     </objectFactory>
+    
+    <environments default="dev">
+        <environment id="dev">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/springboot"/>
+                <property name="username" value="root"/>
+                <property name="password" value=""/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mapper/BookMapper.xml"></mapper>
+    </mappers>
 
 </configuration>

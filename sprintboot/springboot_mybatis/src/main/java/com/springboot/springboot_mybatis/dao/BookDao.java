@@ -3,6 +3,7 @@ package com.springboot.springboot_mybatis.dao;
 import com.springboot.springboot_mybatis.entity.Book;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public interface BookDao {
     List<Book> findAll();
 
     @Insert("insert book_inf(title, author, price) values(#{title},#{author},#{price})  ")
+    @Options(useGeneratedKeys = true, keyColumn = "id", keyProperty = "id")
     Integer insert(Book book);
 
 }
